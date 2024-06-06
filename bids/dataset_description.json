@@ -1,0 +1,20 @@
+{
+    "Acknowledgements": "We thank Ishikia Kohli and Amanda Nguyen for help with data collection",
+    "Authors": [
+      "Daniel Sazhin",
+      "Chelsea Helion",
+      "Vishnu Murty",
+      "David Smith"
+    ],
+    "BIDSVersion": "1.8.0",
+    "DatasetDOI": "https://doi.org/10.17605/OSF.IO/W5DHT",
+    "Funding": [
+     " This work was supported in part by grants the National Institute on Aging (RF1-AG067011 to DVS."
+      
+    ],
+    "HowToAcknowledge": "Please cite [ ] when referencing this dataset",
+    "License": "GNU General Public License (GPL) 3.0",
+    "Name": "A behavioral dataset of predictive decisions given trends in information across adulthood",
+    "ReferencesAndLinks": [
+    ]
+  }

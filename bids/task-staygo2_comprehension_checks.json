@@ -1,0 +1,43 @@
+{
+  "BehavioralMetadata": {
+    "Description": "Gold Mine comprehension check values",
+    "TermURL": "N/A"
+  },
+    "C1_D7": {
+        "Description": "Tokens predicted for comprehension check 1, on the 7th turn",
+        "Units": "Number of tokens"
+        },
+    "C2_D7": {
+        "Description": "Tokens predicted for comprehension check 2, on the 7th turn",
+        "Units": "Number of tokens"
+    },
+
+    "C3_D7": {
+        "Description": "Tokens predicted for comprehension check 3, on the 7th turn",
+        "Units": "Number of tokens"
+    },
+
+    "C4_D7": {
+        "Description": "Tokens predicted for comprehension check 4, on the 7th turn",
+        "Units": "Number of tokens"
+    },
+
+    "C1_D12": {
+        "Description": "Tokens predicted for comprehension check 1, on the 12th turn",
+        "Units": "Number of tokens"
+        },
+    "C2_D12": {
+        "Description": "Tokens predicted for comprehension check 2, on the 12th turn",
+        "Units": "Number of tokens"
+    },
+
+    "C3_D12": {
+        "Description": "Tokens predicted for comprehension check 3, on the 12th turn",
+        "Units": "Number of tokens"
+    },
+
+    "C4_D12": {
+        "Description": "Tokens predicted for comprehension check 4, on the 12th turn",
+        "Units": "Number of tokens"
+    },
+}

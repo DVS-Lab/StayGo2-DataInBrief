@@ -1,0 +1,127 @@
+{
+  "Everyday_Cognition_Metadata": {
+    "Description": "12-item Everyday Cognition scale"
+    "TermURL": "https://www.sciencedirect.com/science/article/abs/pii/S1552526011000896"
+  },
+  "Ecog_q2": {
+    "Description": "Remembering where you have placed objects.",
+    "Levels": {
+      "1": "Better or no change",
+      "2": "A little worse sometimes",
+      "3": "A little worse all the time",
+      "4": "Much worse",
+      "999": "Don't Know"
+    }
+  },
+  "Ecog_q3": {
+    "Description": "Remembering the current date or day of the week.",
+    "Levels": {
+        "1": "Better or no change",
+        "2": "A little worse sometimes",
+        "3": "A little worse all the time",
+        "4": "Much worse",
+        "999": "Don't Know"
+    }
+  },
+  "Ecog_q4": {
+    "Description": "Communicating thoughts in a conversation.",
+    "Levels": {
+        "1": "Better or no change",
+        "2": "A little worse sometimes",
+        "3": "A little worse all the time",
+        "4": "Much worse",
+        "999": "Don't Know"
+      }
+    },
+    "Ecog_q5": {
+        "Description": "Understanding spoken directions or instructions.",
+        "Levels": {
+            "1": "Better or no change",
+            "2": "A little worse sometimes",
+            "3": "A little worse all the time",
+            "4": "Much worse",
+            "999": "Don't Know"
+        }
+    },
+    "Ecog_q6": {
+        "Description": "Reading a map and helping with directions when someone else is driving.",
+        "Levels": {
+            "1": "Better or no change",
+            "2": "A little worse sometimes",
+            "3": "A little worse all the time",
+            "4": "Much worse",
+            "999": "Don't Know"
+        }
+    },
+    "Ecog_q7": {
+        "Description": "Finding your way around a house visited many times.",
+        "Levels": {
+            "1": "Better or no change",
+            "2": "A little worse sometimes",
+            "3": "A little worse all the time",
+            "4": "Much worse",
+            "999": "Don't Know"
+        }
+    },
+    "Ecog_q8": {
+        "Description": "The ability to anticipate weather changes and plan accordingly (i.e. bring a coat or umbrella).",
+        "Levels": {
+            "1": "Better or no change",
+            "2": "A little worse sometimes",
+            "3": "A little worse all the time",
+            "4": "Much worse",
+            "999": "Don't Know"
+        }
+    },
+    "Ecog_q9": {
+        "Description": "Thinking ahead.",
+        "Levels": {
+            "1": "Better or no change",
+            "2": "A little worse sometimes",
+            "3": "A little worse all the time",
+            "4": "Much worse",
+            "999": "Don't Know"
+        }
+    },
+    "Ecog_q10": {
+        "Description": "Keeping living and work space organized.",
+        "Levels": {
+            "1": "Better or no change",
+            "2": "A little worse sometimes",
+            "3": "A little worse all the time",
+            "4": "Much worse",
+            "999": "Don't Know"
+        }
+    },
+    "Ecog_q12": {
+        "Description": "Balancing the checkbook without error.",
+        "Levels": {
+            "1": "Better or no change",
+            "2": "A little worse sometimes",
+            "3": "A little worse all the time",
+            "4": "Much worse",
+            "999": "Don't Know"
+        }
+    },
+    "Ecog_q13": {
+        "Description": "The ability to do two things at once.",
+        "Levels": {
+            "1": "Better or no change",
+            "2": "A little worse sometimes",
+            "3": "A little worse all the time",
+            "4": "Much worse",
+            "999": "Don't Know"
+        }
+    },
+    "Ecog_q14": {
+        "Description": "Cooking or working and talking at the same time.",
+        "Levels": {
+            "1": "Better or no change",
+            "2": "A little worse sometimes",
+            "3": "A little worse all the time",
+            "4": "Much worse",
+            "999": "Don't Know"
+        }
+      }
+  }
+}

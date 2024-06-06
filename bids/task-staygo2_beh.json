@@ -1,0 +1,164 @@
+{
+  "BehavioralMetadata": {
+    "Description": "Gold Mine Task Behavior",
+    "TermURL": "N/A"
+  },
+  "block": {
+    "Description": "Identifies the trial order presented to the participant",
+    "Levels": {
+      "1": "Block 1",
+      "2": "Block 2",
+      "3": "Block 3",
+      "4": "Block 4",
+      "5": "Block 5",
+      "6": "Block 6",
+      "7": "Block 7",
+      "8": "Block 8",
+      "9": "Block 9",
+      "10": "Block 10",
+      "11": "Block 11",
+      "12": "Block 12",
+      "13": "Block 13",
+      "14": "Block 14",
+      "15": "Block 15",
+      "16": "Block 16",
+      "17": "Block 17",
+      "18": "Block 18",
+      "19": "Block 19",
+      "20": "Block 20",
+      "21": "Block 21",
+      "22": "Block 22",
+      "23": "Block 23",
+      "24": "Block 24"
+    }
+  },
+  "trial_type": {
+    "Description": "Type of trial, coded as exponential or inverse (e or i), final value of trend on the 12th turn (84 to 166 tokens) and steepness of curve (1.2 or 1.4). ",
+    "Levels": {
+      "1e_127_a1.2": "e_127_a1.2",
+      "e_166_a1.4": "e_166_a1.4",
+      "i_113_a1.2": "i_113_a1.2",
+      "i_116_a1.4": "i_116_a1.4",
+      "e_78_a1.2": "e_78_a1.2",
+      "e_59_a1.4": "e_59_a1.4",
+      "i_88_a1.2": "i_88_a1.2",
+      "i_84_a1.4": "i_84_a1.4"
+    }
+  },
+  "phase": {
+    "Description": "Information was recorded for decisions (learn, stay or leave), and feedback.",
+    "Levels": {
+      "learn": "dec_learn",
+      "stay": "dec_stay",
+      "leave": "dec_leave",
+      "feedback": "feedback"
+    }
+  },
+  "turn": {
+    "Description": "The turn (1 through 6) when decision was made",
+    "Levels": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6"
+    }
+  },
+  "tokens": {
+    "Description": "The number of tokens displayed to the participant on the decision turn.",
+    "Levels": {
+
+      "0": "0 tokens",
+      "1": "1 token",
+      "2": "2 tokens",
+      "3": "3 tokens",
+      "4": "4 tokens",
+      "5": "5 tokens",
+      "7": "7 tokens",
+      "8": "8 tokens",
+      "11": "11 tokens",
+      "12": "12 tokens",
+      "13": "13 tokens",
+      "15": "15 tokens",
+      "16": "16 tokens",
+      "17": "17 tokens",
+      "19": "19 tokens",
+      "20": "20 tokens",
+      "21": "21 tokens",
+      "24": "24 tokens",
+      "25": "25 tokens",
+      "30": "30 tokens", 
+      "32": "32 tokens",
+      "34": "34 tokens",
+      "39": "39 tokens",
+      "42": "42 tokens",
+      "51": "51 tokens",
+      "53": "53 tokens",
+      "55": "55 tokens",
+      "58": "58 tokens",
+      "59": "59 tokens",
+      "64": "64 tokens",
+      "66": "66 tokens",
+      "70": "70 tokens",
+      "75": "75 tokens",
+      "76": "76 tokens",
+      "84": "84 tokens",
+      "87": "87 tokens",
+      "96": "96 tokens",
+      "102": "102 tokens"
+
+    }
+  },
+  "alpha": {
+    "Description": "Steepness of the curve. 1.2 is low (more linear) and 1.4 is high (more curved).",
+    "Levels": {
+      "1.2": "1.2",
+      "1.4": "1.4"
+    }
+  },
+"final_value": {
+  "Description": "Outcome of the curve on the 10th turn (83 tokens) and 14th turn (117 tokens) respectively. For exponential curves, 117 tokens on the 14th turn is worse than the sure-and-steady mine. For inverse exponential curves, 83 tokens on the 10th turn is worse than the sure-and-steady mine. ",
+  "Levels": {
+    "83": "83",
+    "117": "117"
+  }
+},
+"correct": {
+  "Description": "Identifies if the participants correctly specified if the trend was better or worse than the sure-and-steady mine on the 12th turn.",
+  "Levels": {
+    "0": "incorrect",
+    "1": "correct"
+  }
+},
+"stay": {
+  "Description": "Identifies if the participant selected to Stay or Leave the mine",
+  "Levels": {
+    "0": "Leave",
+    "1": "Stay"
+  }
+},
+"earnings": {
+  "Description": "Amount of money participant earned from the block. If correct, participants earned $6 plus whatever was left from their endowment. If incorrect, they earned $0 for the block",
+  "Levels": {
+    "0": "$0",
+    "3": "$3",
+    "3.50": "$3.50",
+    "4": "$4",
+    "4.50": "$4.50",
+    "5.0": "$5",
+    "5.5": "$5.50",
+    "6": "$6",
+    "6.5": "$6.50",
+    "7": "$7",
+    "7.5": "$7.50",
+    "8": "$8",
+    "8.50": "$8.50"
+  }
+},
+"response_time": {
+  "Description": "Amount of time participant took to make their decision",
+   "Units": "seconds (string)"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "BehavioralMetadata": {
+    "Description": "Gold Mine comprehension check values",
+        "TermURL": "N/A"
+    },
+        "C1": {
+            "Description": "Decision if mine was better compared to sure-and-steady mine.",
+            "Levels": {
+            "Yes": "Yes (Leave)",
+            "No": "No (Stay)"
+            },
+        "C2": {
+            "Description": "Decision if mine was better compared to sure-and-steady mine.",
+            "Levels": {
+            "Yes": "Yes (Leave)",
+            "No": "No (Stay)"
+        },
+
+        "C3": {
+            "Description": "Decision if mine was better compared to sure-and-steady mine.",
+            "Levels": {
+             "Yes": "Yes (Leave)",
+            "No": "No (Stay)"
+        },
+
+        "C4": {
+            "Description": "Decision if mine was better compared to sure-and-steady mine.",
+            "Levels": {
+            "Yes": "Yes (Leave)",
+            "No": "No (Stay)"
+        },
+    }

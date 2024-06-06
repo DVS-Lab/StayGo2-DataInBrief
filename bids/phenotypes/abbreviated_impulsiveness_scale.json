@@ -1,0 +1,123 @@
+{
+    "ABISMetadata": {
+      "Description": "Abbreviated Impulsiveness Scale (ABIS)",
+      "TermURL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4527550/"
+    },
+    "ABIS_q1": {
+      "Description": "I am a careful thinker.",
+      "Levels": {
+        "1": "Rarely/Never",
+        "2": "Occasionally",
+        "3": "Often",
+        "4": "Almost Always/Always"
+      }
+    },
+    "ABIS_q2": {
+      "Description": "I plan trips well ahead of time.",
+      "Levels": {
+        "1": "Rarely/Never",
+        "2": "Occasionally",
+        "3": "Often",
+        "4": "Almost Always/Always"
+      }
+    },
+    "ABIS_q3": {
+      "Description": "I do things without thinking.",
+      "Levels": {
+        "1": "Rarely/Never",
+        "2": "Occasionally",
+        "3": "Often",
+        "4": "Almost Always/Always"
+      }
+    },
+    "ABIS_q4": {
+      "Description": "I concentrate easily.",
+      "Levels": {
+        "1": "Rarely/Never",
+        "2": "Occasionally",
+        "3": "Often",
+        "4": "Almost Always/Always"
+      }
+    },
+    "ABIS_q5": {
+      "Description": "I plan for job security.",
+      "Levels": {
+        "1": "Rarely/Never",
+        "2": "Occasionally",
+        "3": "Often",
+        "4": "Almost Always/Always"
+      }
+    },
+    "ABIS_q6": {
+      "Description": "I act “on impulse.”",
+      "Levels": {
+        "1": "Rarely/Never",
+        "2": "Occasionally",
+        "3": "Often",
+        "4": "Almost Always/Always"
+      }
+    },
+    "ABIS_q7": {
+      "Description": "I am self controlled.",
+      "Levels": {
+        "1": "Rarely/Never",
+        "2": "Occasionally",
+        "3": "Often",
+        "4": "Almost Always/Always"
+      }
+    },
+    "ABIS_q8": {
+      "Description": "I say things without thinking.",
+      "Levels": {
+        "1": "Rarely/Never",
+        "2": "Occasionally",
+        "3": "Often",
+        "4": "Almost Always/Always"
+      }
+    },
+    "ABIS_q9": {
+      "Description": "I don’t “pay attention.”",
+      "Levels": {
+        "1": "Rarely/Never",
+        "2": "Occasionally",
+        "3": "Often",
+        "4": "Almost Always/Always"
+      }
+    },
+    "ABIS_q10": {
+      "Description": "I act on the spur of the moment.",
+      "Levels": {
+        "1": "Rarely/Never",
+        "2": "Occasionally",
+        "3": "Often",
+        "4": "Almost Always/Always"
+      }
+    },
+    "ABIS_q11": {
+      "Description": "I plan tasks carefully.",
+      "Levels": {
+        "1": "Rarely/Never",
+        "2": "Occasionally",
+        "3": "Often",
+        "4": "Almost Always/Always"
+      }
+    },
+    "ABIS_q12": {
+      "Description": "I am a steady thinker.",
+      "Levels": {
+        "1": "Rarely/Never",
+        "2": "Occasionally",
+        "3": "Often",
+        "4": "Almost Always/Always"
+       }
+     },
+    "ABIS_q13": {
+      "Description": "I am future oriented.",
+      "Levels": {
+        "1": "Rarely/Never",
+        "2": "Occasionally",
+        "3": "Often",
+        "4": "Almost Always/Always"
+      }
+    }
+  }
