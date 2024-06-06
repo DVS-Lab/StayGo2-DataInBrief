@@ -41,9 +41,9 @@ The data was processed using the following steps.
 4. Converted comprehension check data from sourcedata into bids format using [StayGo2_TSV_Comprehension.m](code/StayGo2_TSV_Comprehension.m). This code outputs a *-comprehension_checks.tsv and *-comprehension_decision.tsv file for each participant subfolder in the bids directory. 
 5. Generated phenotypes using [StayGo2_extract_phenotypes.m](code/StayGo2_extract_phenotypes.m) in bids format in the bids/phenotypes directory. Additionally, this script generates a participants.tsv file in the bids directory.
 
- get data via github
-git clone https://github.com/DVS-Lab/StayGo2-DataInBrief
-cd StayGo2-DataInBrief
+ to get data via github
+1. git clone https://github.com/DVS-Lab/StayGo2-DataInBrief
+2. cd StayGo2-DataInBrief
 
 ## Acknowledgments:
 
