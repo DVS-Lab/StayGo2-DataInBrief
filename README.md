@@ -29,7 +29,7 @@ Within the bids subdirectory, we include the following tracked folders:
 
 ## Source Data
 
-The [Qualtrics_sourcdata.xlsx](bids/sourcedata/Qualtrics_sourcdata.xlsx) file contains all of the deidentified source data used in this project.
+The [Qualtrics_sourcdata.xlsx](bids/sourcedata/Qualtrics_sourcedata.xlsx) file contains all of the deidentified source data used in this project.
 
 ## Downloading Data:
 
