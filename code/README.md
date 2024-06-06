@@ -1,10 +1,11 @@
+# Relevant Scripts
+
 All custom code goes into this directory. All scripts are written such that they can be executed from the root of the dataset, and are only using relative paths for portability.
 
-extract_sourcedata.m: This code extracts each participant from the main spreadsheet "StayGo2_data_final.xlsx" in bids/sourcedata/rawdata. Each participant is then generated a subject number and extracted into a separate .xls file within rawdata.
+The code inputs the sourcedata from (bids/sourcedata/Qualtrics_sourcedata.xlsx).
 
-StayGo2_TSV_Converter.m: To generate tsv files in the BIDS directory for the Gold Mine task, use StayGo2_TSV_Converter.m. This code extracts the information needed to generate three column files. Open Matlab and hit run to make the TSV files.
-
-StayGo2_TSV_Comprehension.m: To extract the four comprehension checks for the Gold Mine task, use StayGo2_TSV_Comprehension.m. Open MATLAB and hit run. This code outputs two files in each bids/subject directory. sub-###_task-staygo2_run-1_comprehension_decisions.tsv specifies the decisions made whether the participant would keep the mine (Yes/No). sub-###_task-staygo2_run-1_comprehension_checks.tsv specifies the values the participant selected for their prediction on the 7th and 12th turn. Note that the first row is the values selected by the participant, whereas the second row is the actual value in the trend.
-
-StayGo2_extract_phenotypes.m: To extract phenotype data, open this file in MATLAB and hit Run. PROMIS, EcoG, 7Up7Down, ABIS, DOSPERT, SES, Loneliness are output as separate phenotypes. SES and demographic information are provided in the "Participants.tsv" file.
-
+1. The [extract_sourcedata.m](code/extract_sourcedata.m) Script that extracts raw data and converts it into individual subjects. 
+2. The [Staygo2_TSV_Converter.m](code/Staygo2_TSV_Converter.m) Extracts task data from each subject and converts it into BIDS format. 
+3. The [Stago2_TSV_Comprehension.m](code/Stago2_TSV_Comprehension.m) Extracts comprehension checks (yes/no decision and value predicted) 
+4. The [StayGo2_extract_phenotypes.m](code/StayGo2_extract_phenotypes.m) Specifies survey data in our sample for each participant. 
+5. The [StayGo2_Surveys_Scored.m](code/StayGo2_Surveys_Scored.m) Scores the participants survey responses into outputs for analysis.
