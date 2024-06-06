@@ -16,8 +16,8 @@ bids: data lives in the (bids) directory containing the standardized "raw data" 
 
 Within the bids subdirectory, we include the following tracked folders:
 
-(phenotypes): Psychosocial measures of behavior. This folder includes survey data for each participant. Included are ABIS, DOSPERT, ECOG, Loneliness, PROMIS, and SevenUp SevenDown.
-(sourcedata): behavioral data from the predictive decision-making task. Participants are ordered in folders of sub-001 through sub-360. 
+[phenotypes](bids/phenotypes): Psychosocial measures of behavior. This folder includes survey data for each participant. Included are ABIS, DOSPERT, ECOG, Loneliness, PROMIS, and SevenUp SevenDown.
+[sourcedata](bids/sourcedata): behavioral data from the predictive decision-making task. Participants are ordered in folders of sub-001 through sub-360. 
 
 ## Code 
 
