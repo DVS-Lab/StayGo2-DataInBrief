@@ -11,13 +11,13 @@ Some of the contents of this repository are not tracked (.gitignore) because the
 
 ## Tracked folders and their contents:
 
-code: extraction code lives in the (code) directory.
-bids: data lives in the (bids) directory containing the standardized "raw data" in BIDS format in (sourcedata).
+1. [code](code): extraction scripts lives in the code directory.
+2. [bids](bids): data lives in the bids directory containing the standardized "raw data" in BIDS format in (sourcedata).
 
 Within the bids subdirectory, we include the following tracked folders:
 
-[phenotypes](bids/phenotypes): Psychosocial measures of behavior. This folder includes survey data for each participant. Included are ABIS, DOSPERT, ECOG, Loneliness, PROMIS, and SevenUp SevenDown.
-[sourcedata](bids/sourcedata): behavioral data from the predictive decision-making task. Participants are ordered in folders of sub-001 through sub-360. 
+3. [phenotypes](bids/phenotypes): Psychosocial measures of behavior. This folder includes survey data for each participant. Included are ABIS, DOSPERT, ECOG, Loneliness, PROMIS, and SevenUp SevenDown.
+4. [sourcedata](bids/sourcedata): behavioral data from the predictive decision-making task. Participants are ordered in folders of sub-001 through sub-360. 
 
 ## Code 
 
