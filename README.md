@@ -31,7 +31,7 @@ Within the bids subdirectory, we include the following tracked folders:
 
 The [Qualtrics_sourcedata.xlsx](bids/sourcedata/Qualtrics_sourcedata.xlsx) file contains all of the deidentified source data used in this project.
 
-## Downloading Data:
+## Conversion of Sourcedata to BIDS Format:
 
 The data was processed using the following steps.
 
@@ -40,6 +40,8 @@ The data was processed using the following steps.
 3. Converted behavioral data from sourcedata into bids format using [StayGo2_TSV_Converter.m](code/StayGo2_TSV_Converter.m). This code outputs a *-beh.tsv file for each participant subfolder in the bids directory. 
 4. Converted comprehension check data from sourcedata into bids format using [StayGo2_TSV_Comprehension.m](code/StayGo2_TSV_Comprehension.m). This code outputs a *-comprehension_checks.tsv and *-comprehension_decision.tsv file for each participant subfolder in the bids directory. 
 5. Generated phenotypes using [StayGo2_extract_phenotypes.m](code/StayGo2_extract_phenotypes.m) in bids format in the bids/phenotypes directory. Additionally, this script generates a participants.tsv file in the bids directory.
+
+## Downloading Data:
 
  to get data via github
 1. git clone https://github.com/DVS-Lab/StayGo2-DataInBrief

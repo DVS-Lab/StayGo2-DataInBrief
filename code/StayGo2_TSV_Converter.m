@@ -705,7 +705,7 @@ for subj = 1:N % 37:N for each Participant with response time data and after sof
      nanvals = isnan(vals);
      test_participant = array2table(Final_Participant);
      
-     fname = sprintf('sub-%03d_task-staygo2_beh.tsv',subj,r); % making compatible with bids output
+     fname = sprintf('sub-%03d_task-staygo2_beh.tsv',subj); % making compatible with bids output
      output = fullfile(usedir,'bids',['sub-' num2str(partnum)]);
      if ~exist(output)
          mkdir(output)

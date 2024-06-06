@@ -15,7 +15,7 @@ clc
 [pathstr,name,ext] = fileparts(pwd);
 usedir = pathstr;
 %[pathstr2,name,ext] = fileparts(usedir)
-maindir = fullfile(usedir,'bids','sourcedata');
+maindir = fullfile(usedir,'bids');
 
 N = 360;
 %% Comprehension Data
@@ -25,7 +25,7 @@ for subj = 1:N  %37:N % for each Participant after soft launch
     try
         
         partnum = num2str(subj,'%03.f');
-        inputdir_name = fullfile(maindir,(['sub-' partnum]),(['sub-' partnum]));
+        inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum]));
         outputdir = fullfile(maindir,['sub-' partnum]);
         [n,t,data] = xlsread(inputdir_name);
         
