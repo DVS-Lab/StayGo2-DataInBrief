@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/811528780.svg)](https://zenodo.org/doi/10.5281/zenodo.11513694)
+
 # StayGo Data
 This repository contains the final code for managing and processing all of the data in our StayGo project. A preprint of a data paper has been posted to PsyArxiv (UPDATE) and is under consideration at Data in Brief.
 
