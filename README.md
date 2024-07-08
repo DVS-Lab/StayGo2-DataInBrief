@@ -5,7 +5,9 @@ This repository contains the final code for managing and processing all of the d
 
 ## Prerequisites and Recommendations
 1. Understand BIDS 
-2. Install MATLAB
+2. Install MATLAB or OCTAVE.
+
+Note: If using OCTAVE, you must download the "io" package. Use "pkg install -forge io" in the commandline to install.
 
 Some of the contents of this repository are not tracked (.gitignore) because the files are large and we do not yet have a nice workflow for datalad. Note that we only track key text files in bids.
 
