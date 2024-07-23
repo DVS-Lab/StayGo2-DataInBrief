@@ -26,6 +26,8 @@ Within the bids subdirectory, we include the following tracked folders:
 3. The [StayGo2_TSV_Comprehension.m](code/StayGo2_TSV_Comprehension.m) Extracts comprehension checks (yes/no decision and value predicted) 
 4. The [StayGo2_extract_phenotypes.m](code/StayGo2_extract_phenotypes.m) Specifies survey data in our sample for each participant. 
 5. The [StayGo2_Surveys_Scored.m](code/StayGo2_Surveys_Scored.m) Scores the participants survey responses into outputs for analysis.
+6. The[survey_questions.docx](code/survey_questions.docx) is a reference file to access the stimuli/questionnaires participants experienced.
+7. The [StayGo2.qsf](code/StayGo2.qsf) is the Qualtrics survey implemented. Upload it directly to Qualtrics to preview or reproduce the survey.
 
 ## Conversion of Sourcedata to BIDS Format
 The [Qualtrics_sourcedata.xlsx](bids/sourcedata/Qualtrics_sourcedata.xlsx) file contains all of the deidentified source data used in this project.

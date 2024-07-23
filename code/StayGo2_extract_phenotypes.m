@@ -14,16 +14,18 @@ clc;
 
 [pathstr,name,ext] = fileparts(pwd);
 usedir = pathstr;
+%rootdir = fileparts(usedir);
 %[pathstr2,name,ext] = fileparts(usedir)
-maindir = fullfile(usedir,'bids','sourcedata');
+maindir = fullfile(usedir,'bids');
 outputdir = fullfile(usedir,'bids');
+codedir = fullfile(usedir,'code');
 
 N = 360; % For total Participants
 
 %% Loneliness Questionnaire
 
 fname = sprintf('loneliness_questionnaire.tsv'); % making compatible with bids output
-output = fullfile(usedir,'bids','phenotypes',fname);
+output = fullfile(usedir,'bids','phenotype',fname);
 
 if ~exist(output)
     delete(output)
@@ -39,7 +41,7 @@ for ii = 1:N %1:N % for each Participant
     try
         
     partnum = num2str(ii,'%03.f');
-    inputdir_name = fullfile(maindir,(['sub-' partnum]),(['sub-' partnum]));
+    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.csv']));
     [n,t,data] = xlsread(inputdir_name);
     
     %% Loneliness
@@ -88,7 +90,7 @@ fclose(fid);
 %% 7Up7Down
 
 fname = sprintf('sevenup_sevendown_questionnaire.tsv'); % making compatible with bids output
-output = fullfile(usedir,'bids','phenotypes',fname);
+output = fullfile(usedir,'bids','phenotype',fname);
 
 if ~exist(output)
     delete(output)
@@ -104,7 +106,7 @@ for ii = 1:N %1:N % for each Participant
     try
         
     partnum = num2str(ii,'%03.f');
-    inputdir_name = fullfile(maindir,(['sub-' partnum]),(['sub-' partnum]));
+    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.csv']));
     [n,t,data] = xlsread(inputdir_name);
  
     start = find(strcmp('7up7down_1',data(1,:))); % Find the 7up7down 1 column,
@@ -137,7 +139,7 @@ fclose(fid);
 %% PROMIS
 
 fname = sprintf('promis_questionnaire.tsv'); % making compatible with bids output
-output = fullfile(usedir,'bids','phenotypes',fname);
+output = fullfile(usedir,'bids','phenotype',fname);
 
 if ~exist(output)
     delete(output)
@@ -153,7 +155,7 @@ for ii = 1:N %1:N % for each Participant
     try
         
     partnum = num2str(ii,'%03.f');
-    inputdir_name = fullfile(maindir,(['sub-' partnum]),(['sub-' partnum]));
+    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.csv']));
     [n,t,data] = xlsread(inputdir_name);
  
     start = find(strcmp('PROMIS_1',data(1,:))); % Find the 7up7down 1 column,
@@ -187,7 +189,7 @@ fclose(fid);
 %% ABIS
 
 fname = sprintf('abbreviated_impulsiveness_scale.tsv'); % making compatible with bids output
-output = fullfile(usedir,'bids','phenotypes',fname);
+output = fullfile(usedir,'bids','phenotype',fname);
 
 if ~exist(output)
     delete(output)
@@ -203,7 +205,7 @@ for ii = 1:N %1:N % for each Participant
     try
         
     partnum = num2str(ii,'%03.f');
-    inputdir_name = fullfile(maindir,(['sub-' partnum]),(['sub-' partnum]));
+    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.csv']));
     [n,t,data] = xlsread(inputdir_name);
  
     start = find(strcmp('ABIS_1',data(1,:))); % Find the 7up7down 1 column,
@@ -236,7 +238,7 @@ fclose(fid);
 %% ECoG
 
 fname = sprintf('everyday_cognition_questionnaire.tsv'); % making compatible with bids output
-output = fullfile(usedir,'bids','phenotypes',fname);
+output = fullfile(usedir,'bids','phenotype',fname);
 
 if ~exist(output)
     delete(output)
@@ -253,7 +255,7 @@ for ii = 1:N %1:N % for each Participant
     try
         
     partnum = num2str(ii,'%03.f');
-    inputdir_name = fullfile(maindir,(['sub-' partnum]),(['sub-' partnum]));
+    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.csv']));
     [n,t,data] = xlsread(inputdir_name);
  
     start = find(strcmp('Ecog_2',data(1,:))); 
@@ -285,7 +287,7 @@ fclose(fid);
 %% DOSPERT
 
 fname = sprintf('domain_specific_risk_taking_scale.tsv'); % making compatible with bids output
-output = fullfile(usedir,'bids','phenotypes',fname);
+output = fullfile(usedir,'bids','phenotype',fname);
 
 if ~exist(output)
     delete(output)
@@ -303,8 +305,7 @@ for ii = 1:N %1:N % for each Participant
     try
         
     partnum = num2str(ii,'%03.f');
-    inputdir_name = fullfile(maindir,(['sub-' partnum]),(['sub-' partnum]));
-    [n,t,data] = xlsread(inputdir_name);
+    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.csv']));
  
     start = find(strcmp('ethRT_1',data(1,:))); 
     finish = find(strcmp('socRT_6',data(1,:))); 
@@ -335,8 +336,11 @@ fclose(fid);
 
 %% Participants
 
+%filedir = fullfile(codedir,'ortega_parameters_all_zipcodes.xls');
+[f,~,data1] = xlsread('ortega_parameters_all_zipcodes.csv');
+
 fname = sprintf('participants.tsv'); % making compatible with bids output
-output = fullfile(usedir,'bids',fname);
+output = fullfile(outputdir,fname);
 
 if ~exist(output)
     delete(output)
@@ -344,17 +348,17 @@ end
 
 myfile = fullfile(output);
 fid = fopen(myfile,'w');
-fprintf(fid,'participant_id\tEducation\tAge\tGender\tRace\tEthnicity\tZipcode\tWhen_Move\tCurrent_City\tCurrent_State\tTotal_Income\tPersonal_Income\tRent\tHousehold_Members\tEducation_ses\tYears_Education\tLadder\tOccupation_1\tOccupation_2\n'); 
+fprintf(fid,'participant_id\tEducation\tAge\tGender\tRace\tEthnicity\tZipcode\tWhen_Move\tCurrent_City\tCurrent_State\tTotal_Income\tPersonal_Income\tRent\tHousehold_Members\tEducation_ses\tYears_Education\tLadder\tOccupation_1\tOccupation_2\tAlpha\tGamma\n'); 
 %fclose(fid);
 
-for ii = 1:N %1:N % for each Participant
+for ii = 1:N % for each Participant
     
     result = [];
     
     try
         
         partnum = num2str(ii,'%03.f');
-        inputdir_name = fullfile(maindir,(['sub-' partnum]),(['sub-' partnum]));
+        inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.csv']));
         [n,t,data] = xlsread(inputdir_name);
         
         start = find(strcmp('Age',data(1,:)));
@@ -371,11 +375,21 @@ for ii = 1:N %1:N % for each Participant
         
         result = string([demo_data(2,:),ses_data(2,:)]);
         
-        if ismissing(result(9)) == 1
-            result(9) = 'n/a';
+        if contains(result(9),"NaN")
+            result(9) = "n/a";
         end
         
-        fprintf(fid,'%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n',['sub-' partnum], result);
+        zipcode_test = str2num(result(6));
+        k = find(f(:,1)==zipcode_test);
+        alpha = f(k(1),end-1);
+        omega = f(k(1),end);
+        add_these = num2str([alpha,omega]);
+        result = [result,add_these];
+        
+       % test = cellfun(@(result) strcmp(result, 'NaN'), result)
+
+        
+        fprintf(fid,'%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n',['sub-' partnum], result);
         
     catch ME
         disp(["subj_" ii "debug" "Participant.tsv"])

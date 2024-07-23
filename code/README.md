@@ -19,3 +19,9 @@ The data was processed using the following steps.
 3. Converted behavioral data from sourcedata into bids format using [StayGo2_TSV_Converter.m](code/StayGo2_TSV_Converter.m). This code outputs a *-beh.tsv file for each participant subfolder in the bids directory. 
 4. Converted comprehension check data from sourcedata into bids format using [StayGo2_TSV_Comprehension.m](code/StayGo2_TSV_Comprehension.m). This code outputs a *-comprehension_checks.tsv and *-comprehension_decision.tsv file for each participant subfolder in the bids directory. 
 5. Generated phenotypes using [StayGo2_extract_phenotypes.m](code/StayGo2_extract_phenotypes.m) in bids format in the bids/phenotypes directory. Additionally, this script generates a participants.tsv file in the bids directory.
+
+## Questionnaire files:
+
+1. We included a reference file for the stimuli that participants experienced. See [survey_questions.docx](code/survey_questions.docx) to access questionnaire items.
+2. Additionally, we included the survey implemented in Qualtrics. If you wish to access or reproduce the survey, upload [StayGo2.qsf](code/StayGo2.qsf) to Qualtrics to see how the survey was coded, or to try it out yourself.
+

@@ -1319,5 +1319,13 @@
     "Other - Motor Vehicle Operator":	"Other - Motor Vehicle Operator",
     "Other - Transportation Workers":	"Other - Transportation Workers"
     }
-  }
+  },
+  "Alpha": {
+  "Description": "Income inequality of county targeted as measured by alpha value",
+  "Units": "alpha"
+  },
+  "Gamma": {
+  "Description": "Income inequality of county targeted as measured by gamma value",
+  "Units": "gamma"
+}
 }

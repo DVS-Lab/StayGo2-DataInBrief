@@ -415,7 +415,7 @@ for kk = 1:N-2
         MuchWorse = length(MuchWorse) *4;
         DontKnow = length(DontKnow) *0;
         
-        Ecog = [Ecog; Better+Sometimes+AllTime+MuchWorse+DontKnow];
+        Ecog = [Ecog; ((Better+Sometimes+AllTime+MuchWorse+DontKnow)/(13-length(DontKnow)))];
         
     else
         

@@ -277,7 +277,7 @@ for subj = 1:N % 37:N for each Participant with response time data and after sof
                     if isnumeric(feedback_response_time) == 1
                         feedback_response_time = feedback_response_time;
                     else
-                        feedback_response_time = 'N/A';
+                        feedback_response_time = 'n/a';
                     end
                 end
                 
@@ -312,7 +312,9 @@ for subj = 1:N % 37:N for each Participant with response time data and after sof
                     turn = 6;
                 end
                 
-                
+                if isnan(response_time) == 1
+                    response_time = 'n/a';
+                end
                 
                 Round_results = [BLOCK, teststr, "dec_learn", turn, tokens, alpha, final_value, "n/a", "n/a", "n/a", response_time];
                 Round_participant = [Round_participant; Round_results];
@@ -430,7 +432,7 @@ for subj = 1:N % 37:N for each Participant with response time data and after sof
                 end
                 
                 if teststr == "i_84_a1.4" && yy == 3 && turn == 4 % exception for messed up timing position
-                    feedback_response_time = 'N/A';
+                    feedback_response_time = 'n/a';
                 end
                 
                 if teststr == "i_84_a1.4" && yy == 3 && turn == 5 % exception for messed up timing position
@@ -475,6 +477,10 @@ for subj = 1:N % 37:N for each Participant with response time data and after sof
                 
                 if correct == 0
                     earning = 0;
+                end
+                
+                if isnan(response_time) == 1
+                    response_time = "n/a";
                 end
                 
                 Round_results = [BLOCK, teststr, "dec_leave", turn, tokens, alpha, final_value, correct, stay, earning, response_time];
@@ -641,6 +647,10 @@ for subj = 1:N % 37:N for each Participant with response time data and after sof
                     earning = 0;
                 end
                 
+                if isnan(response_time) == 1
+                    response_time = "n/a";
+                end
+                
                 Round_results = [BLOCK, teststr, "dec_stay", turn, tokens, alpha, final_value, correct, stay, earning, response_time];
                 Round_participant = [Round_participant; Round_results];
             end
@@ -663,9 +673,13 @@ for subj = 1:N % 37:N for each Participant with response time data and after sof
                 Bad_Trial = [subj, teststr, yy, turn];
                 Record_Bad_Trial = [Record_Bad_Trial; Bad_Trial];
             else
+                if isnan(feedback_response_time) == 1
+                    feedback_response_time = "n/a";
+                end
+                
                 add_feedback = [BLOCK, teststr, "feedback", turn, "n/a", alpha, final_value, "n/a", "n/a", "n/a", feedback_response_time];
                 Round_participant = [Round_participant; add_feedback];
-            end  
+            end
         end
         
         Full_Participant = [Full_Participant; Round_participant];
@@ -706,7 +720,7 @@ for subj = 1:N % 37:N for each Participant with response time data and after sof
      test_participant = array2table(Final_Participant);
      
      fname = sprintf('sub-%03d_task-staygo2_beh.tsv',subj); % making compatible with bids output
-     output = fullfile(usedir,'bids',['sub-' num2str(partnum)]);
+     output = fullfile(usedir,'bids',['sub-' num2str(partnum)],'beh');
      if ~exist(output)
          mkdir(output)
      end
@@ -741,10 +755,10 @@ for subj = 1:N % 37:N for each Participant with response time data and after sof
          
          if row.phase ==  "feedback"
              row = table2array(row);
-             fprintf(fid,'%f\t%s\t%s\t%s\t%s\t%f\t%f\t%s\t%s\t%s\t%f\n',row); % accepted offer
+             fprintf(fid,'%f\t%s\t%s\t%s\t%s\t%f\t%f\t%s\t%s\t%s\t%s\n',row); % accepted offer
          else  
              row = table2array(row);
-             fprintf(fid,'%f\t%s\t%s\t%f\t%f\t%f\t%f\t%s\t%s\t%s\t%f\n',row);
+             fprintf(fid,'%f\t%s\t%s\t%f\t%f\t%f\t%f\t%s\t%s\t%s\t%s\n',row);
          end  
      end
      fclose(fid);  
@@ -771,7 +785,7 @@ end
 [K,~] = size(All_Bad_Trials);
 
 if K > 0
-    filename = [pwd '\Missing_Feedback_Trials.xls'];
+    filename = [pwd '\Missing_Feedback_Trials.csv'];
     writetable(All_Bad_Trials, filename); % Save file in table form
 end
 
