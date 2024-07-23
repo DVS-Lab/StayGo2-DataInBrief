@@ -41,7 +41,7 @@ for ii = 1:N %1:N % for each Participant
     try
         
     partnum = num2str(ii,'%03.f');
-    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.csv']));
+    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.xlsx']));
     [n,t,data] = xlsread(inputdir_name);
     
     %% Loneliness
@@ -106,7 +106,7 @@ for ii = 1:N %1:N % for each Participant
     try
         
     partnum = num2str(ii,'%03.f');
-    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.csv']));
+    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.xlsx']));
     [n,t,data] = xlsread(inputdir_name);
  
     start = find(strcmp('7up7down_1',data(1,:))); % Find the 7up7down 1 column,
@@ -155,7 +155,7 @@ for ii = 1:N %1:N % for each Participant
     try
         
     partnum = num2str(ii,'%03.f');
-    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.csv']));
+    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.xlsx']));
     [n,t,data] = xlsread(inputdir_name);
  
     start = find(strcmp('PROMIS_1',data(1,:))); % Find the 7up7down 1 column,
@@ -205,7 +205,7 @@ for ii = 1:N %1:N % for each Participant
     try
         
     partnum = num2str(ii,'%03.f');
-    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.csv']));
+    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.xlsx']));
     [n,t,data] = xlsread(inputdir_name);
  
     start = find(strcmp('ABIS_1',data(1,:))); % Find the 7up7down 1 column,
@@ -255,7 +255,7 @@ for ii = 1:N %1:N % for each Participant
     try
         
     partnum = num2str(ii,'%03.f');
-    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.csv']));
+    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.xlsx']));
     [n,t,data] = xlsread(inputdir_name);
  
     start = find(strcmp('Ecog_2',data(1,:))); 
@@ -305,7 +305,7 @@ for ii = 1:N %1:N % for each Participant
     try
         
     partnum = num2str(ii,'%03.f');
-    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.csv']));
+    inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.xlsx']));
  
     start = find(strcmp('ethRT_1',data(1,:))); 
     finish = find(strcmp('socRT_6',data(1,:))); 
@@ -337,7 +337,7 @@ fclose(fid);
 %% Participants
 
 %filedir = fullfile(codedir,'ortega_parameters_all_zipcodes.xls');
-[f,~,data1] = xlsread('ortega_parameters_all_zipcodes.csv');
+[f,~,data1] = xlsread('ortega_parameters_all_zipcodes.xls');
 
 fname = sprintf('participants.tsv'); % making compatible with bids output
 output = fullfile(outputdir,fname);
@@ -351,14 +351,14 @@ fid = fopen(myfile,'w');
 fprintf(fid,'participant_id\tEducation\tAge\tGender\tRace\tEthnicity\tZipcode\tWhen_Move\tCurrent_City\tCurrent_State\tTotal_Income\tPersonal_Income\tRent\tHousehold_Members\tEducation_ses\tYears_Education\tLadder\tOccupation_1\tOccupation_2\tAlpha\tGamma\n'); 
 %fclose(fid);
 
-for ii = 1:N % for each Participant
+for ii = 10 % for each Participant
     
     result = [];
     
-    try
+   
         
         partnum = num2str(ii,'%03.f');
-        inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.csv']));
+        inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.xlsx']));
         [n,t,data] = xlsread(inputdir_name);
         
         start = find(strcmp('Age',data(1,:)));
@@ -367,15 +367,15 @@ for ii = 1:N % for each Participant
         IndexedColumns = round(linspace(start-1,finish, 9)); % Ignore DQ.
         demo_data = data(:,IndexedColumns(1:end));
         
-        start = find(strcmp('total income',data(1,:)));
-        finish = find(strcmp('Occupation_2',data(1,:)));
+        start2 = find(strcmp('total income',data(1,:)));
+        finish2 = find(strcmp('Occupation_2',data(1,:)));
         T = 9; % Number of questions
-        IndexedColumns = round(linspace(start,finish, 9));
+        IndexedColumns = round(linspace(start2,finish2, 9));
         ses_data = data(:,IndexedColumns(1:end));
         
         result = string([demo_data(2,:),ses_data(2,:)]);
         
-        if contains(result(9),"NaN")
+        if ismissing(result(9))
             result(9) = "n/a";
         end
         
@@ -383,17 +383,19 @@ for ii = 1:N % for each Participant
         k = find(f(:,1)==zipcode_test);
         alpha = f(k(1),end-1);
         omega = f(k(1),end);
-        add_these = num2str([alpha,omega]);
+        add_these = num2str(alpha);
+        add_these2 = num2str(omega);
         result = [result,add_these];
+        result = [result,add_these2];
         
        % test = cellfun(@(result) strcmp(result, 'NaN'), result)
 
         
-        fprintf(fid,'%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n',['sub-' partnum], result);
+        fprintf(fid,'%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n',['sub-' partnum], result);
         
-    catch ME
-        disp(["subj_" ii "debug" "Participant.tsv"])
-    end
+    %catch ME
+    %    disp(["subj_" ii "debug" "Participant.tsv"])
+    %end
 end
 
 fclose(fid);

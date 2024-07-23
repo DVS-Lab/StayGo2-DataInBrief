@@ -19,7 +19,7 @@ clc;
 [pathstr,~,~] = fileparts(pwd);
 usedir = pathstr;
 
-rawdatadir = fullfile(usedir,'bids','sourcedata','Qualtrics_sourcedata.csv');
+rawdatadir = fullfile(usedir,'bids','sourcedata','Qualtrics_sourcedata.xlsx');
 [n,t,rawdata] = xlsread(rawdatadir);
 headers = t(1,:); % Pulls out the headers
 
@@ -51,7 +51,7 @@ for ii = 1:N
     participant = [headers;raw_participant];
 
     tempname = fullfile(outputdir_name,(['sub-' partnum]));
-    filename = [tempname '.csv'];
+    filename = [tempname '.xlsx'];
     writecell(participant,filename);% Save file in table form
 
     sub_list = [sub_list;partnum];

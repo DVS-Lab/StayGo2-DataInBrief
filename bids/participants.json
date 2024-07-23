@@ -41,7 +41,7 @@
     "Description": "Current zipcode of the participant as reported by the participant",
     "Units": "zipcode (numeric values)"
   },
-  "when_move": {
+  "When_Move": {
     "Description": "When participant moved to current zipcode as reported by the participant",
     "Levels": {
       "Less than 6 months ago": "Less than 6 months ago",
@@ -51,11 +51,11 @@
       "More than 5 years ago": "More than 5 years ago"
     }
   },
-  "current_city": {
+  "Current_City": {
     "Description": "Current state of the participant as reported by the participant",
     "Units": "city (string)"
   },
-  "current_state": {
+  "Current_State": {
     "Description": "Current state of the participant as reported by the participant",
     "Levels": {
       "Alabama": "Alabama",
@@ -111,8 +111,8 @@
       "Other": "Other"
     }
   },
-"childhood_zipcode": {
-  "Description": "Reported zipcode of the home where the participant spent the majority of their childhood (0-18 years of age)",
+"Zipcode": {
+  "Description": "Reported zipcode of the participant's home",
   "Units": "zipcode (numeric values)"
 },
 "childhood_city": {
@@ -186,7 +186,7 @@
     "More than 10 years": "More than 10 years"
   }
 },
-"total_income": {
+"Total_Income": {
   "Description": "Self-reported total household income before tax is taken out",
   "Levels": {
     "$0-$25,000": "$0-$25,000",
@@ -198,7 +198,7 @@
     "Greater than $201,000": "Greater than $201,000"
   }
 },
-"personal_income": {
+"Personal_Income": {
   "Description": "Self-reported personal income before tax is taken out",
   "Levels": {
     "$0-$25,000": "$0-$25,000",
@@ -217,7 +217,7 @@
     "Own (or pay mortgage)": "Own (or pay mortgage)"
   }
 },
-"personal_income": {
+"Household_Members": {
   "Description": "Self-reported members of the participant's household related to them",
   "Levels": {
     "1": "1",
@@ -229,7 +229,7 @@
     "I live with roommates": "I live with roomates"
   }
 },
-"education_ses": {
+"Education_ses": {
   "Description": "Self-reported level of educational attainment",
   "Levels": {
     "Less than high school": "Less than high school",
@@ -241,11 +241,11 @@
     "Postgraduate degree": "Postgraduate degree"
   }
 },
-"years_education": {
+"Years_Education": {
   "Description": "Years of education of the participant as reported by the participant",
   "Units": "years"
 },
-"ladder": {
+"Ladder": {
   "Description": "Participant's self-reported assessment of standing in the ladder of society",
   "Levels": {
     "Top": "Top",
