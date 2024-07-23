@@ -1,86 +1,86 @@
 {
-  "PROMISMetadata": {
-    "Description": "Patient-Reported Outcomes Measurement Information System",
-    "TermURL": "https://www.psychiatry.org/getmedia/f284f967-ed9e-4754-99fc-b32765b1c4a0/APA-DSM5TR-Level2AnxietyAdult.pdf"
-  },
-  "PROMIS_q1": {
-    "Description": "I felt fearful.",
-    "Levels": {
-      "1": "Never or hardly ever",
-      "2": "Rarely",
-      "3": "Sometimes",
-      "4": "Often",
-      "5": "Always"
-    }
-  },
-  "PROMIS_q2": {
-    "Description": "I found it hard to focus on anything other than my anxiety",
-    "Levels": {
-      "1": "Never or hardly ever",
-      "2": "Rarely",
-      "3": "Sometimes",
-      "4": "Often",
-      "5": "Always"
-    }
-  },
-  "PROMIS_q3": {
-    "Description": "My worries overwhelmed me.",
-    "Levels": {
-      "1": "Never or hardly ever",
-      "2": "Rarely",
-      "3": "Sometimes",
-      "4": "Often",
-      "5": "Always"
-    }
-  },
-  "PROMIS_q4": {
-    "Description": "I felt uneasy.",
-    "Levels": {
-      "1": "Never or hardly ever",
-      "2": "Rarely",
-      "3": "Sometimes",
-      "4": "Often",
-      "5": "Always"
-    }
-  },
-  "PROMIS_q5": {
-    "Description": "I felt nervous.",
-    "Levels": {
-      "1": "Never or hardly ever",
-      "2": "Rarely",
-      "3": "Sometimes",
-      "4": "Often",
-      "5": "Always"
-    }
-  },
-  "PROMIS_q6": {
-    "Description": "I felt like I needed help for my anxiety.",
-    "Levels": {
-      "1": "Never or hardly ever",
-      "2": "Rarely",
-      "3": "Sometimes",
-      "4": "Often",
-      "5": "Always"
-    }
-  },
-  "PROMIS_q7": {
-    "Description": "I felt anxious.",
-    "Levels": {
-      "1": "Never or hardly ever",
-      "2": "Rarely",
-      "3": "Sometimes",
-      "4": "Often",
-      "5": "Always"
-    }
-  },
-  "PROMIS_q8": {
-    "Description": "I felt tense.",
-    "Levels": {
-      "1": "Never or hardly ever",
-      "2": "Rarely",
-      "3": "Sometimes",
-      "4": "Often",
-      "5": "Always"
-    }
+"PROMISMetadata": {
+  "Description": "Patient-Reported Outcomes Measurement Information System",
+  "TermURL": "https://www.psychiatry.org/getmedia/f284f967-ed9e-4754-99fc-b32765b1c4a0/APA-DSM5TR-Level2AnxietyAdult.pdf"
+},
+"PROMIS_q1": {
+  "Description": "I felt fearful.",
+  "Levels": {
+    "1": "Never or hardly ever",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Often",
+    "5": "Always"
   }
+},
+"PROMIS_q2": {
+  "Description": "I found it hard to focus on anything other than my anxiety",
+  "Levels": {
+    "1": "Never or hardly ever",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Often",
+    "5": "Always"
+  }
+},
+"PROMIS_q3": {
+  "Description": "My worries overwhelmed me.",
+  "Levels": {
+    "1": "Never or hardly ever",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Often",
+    "5": "Always"
+  }
+},
+"PROMIS_q4": {
+  "Description": "I felt uneasy.",
+  "Levels": {
+    "1": "Never or hardly ever",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Often",
+    "5": "Always"
+  }
+},
+"PROMIS_q5": {
+  "Description": "I felt nervous.",
+  "Levels": {
+    "1": "Never or hardly ever",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Often",
+    "5": "Always"
+  }
+},
+"PROMIS_q6": {
+  "Description": "I felt like I needed help for my anxiety.",
+  "Levels": {
+    "1": "Never or hardly ever",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Often",
+    "5": "Always"
+  }
+},
+"PROMIS_q7": {
+  "Description": "I felt anxious.",
+  "Levels": {
+    "1": "Never or hardly ever",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Often",
+    "5": "Always"
+  }
+},
+"PROMIS_q8": {
+  "Description": "I felt tense.",
+  "Levels": {
+    "1": "Never or hardly ever",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Often",
+    "5": "Always"
+  }
+}
 }
