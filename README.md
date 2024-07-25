@@ -1,11 +1,15 @@
 [![DOI](https://zenodo.org/badge/811528780.svg)](https://zenodo.org/doi/10.5281/zenodo.11513694)
 
 # StayGo Data
-This repository contains the final code for managing and processing all of the data in our StayGo project. A preprint of a data paper has been posted to PsyArxiv (UPDATE) and is under consideration at Data in Brief.
+This repository contains the final code for managing and processing all of the data in our StayGo project. A preprint of a data paper has been posted to PsyArxiv ((https://osf.io/preprints/psyarxiv/x8fu6)) and is under consideration at Data in Brief.
 
 ## Prerequisites and Recommendations
-1. Understand BIDS 
-2. Install MATLAB or OCTAVE.
+1. Understand BIDS (see: https://bids.neuroimaging.io/specification.html)
+2. Install MATLAB or OCTAVE and LibreOffice.
+
+This repository contains the sourcedata (raw deidentified participant information), the scripts to extract the survey and behavioral data, along with the data formatted to BIDS specification. To access the data, go the [bids](bids) folder. Both the decisions made in the Gold Mine task and the subsequent Comprehension Checks live under each participant folder. The survey data is organized within the [phenotype](phenotype) folder. The data is in TSV format and can be easily read into any analysis program (or into a spreadsheet software like LibreOffice). Additionally, per BIDS specification we include metadata files in .JSON format. These files can be opened with any text editor and serve as a data dictionary for each file type included.
+
+If you wish to reproduce the data extraction, you can access the raw Qualtrics output file in [sourcedata](bids/sourcedata) and follow the steps described later in the README to run the scripts in the [code](code) directory. The scripts were generated in MATLAB, though they can be run as well in Octave, an open source alternative.
 
 Note: If using OCTAVE, you must download the "io" package. Use "pkg install -forge io" in the commandline to install.
 

@@ -1,1 +1,2 @@
 participant_id	Education	Age	Gender	Race	Ethnicity	Zipcode	When_Move	Current_City	Current_State	Total_Income	Personal_Income	Rent	Household_Members	Education_ses	Years_Education	Ladder	Occupation_1	Occupation_2	Alpha	Gamma
+sub-010	No college degree	36	Female	White (Non-Hispanic)	Not Hispanic or Latino	85008	More than 5 years ago	phoenix	Arizona	$0-$25,000	$0-$25,000	Rent	I live alone	Less than high school	6	3	Homemaker/Stay at home parent	Homemaker/Stay at home parent	0.5862	0.61568

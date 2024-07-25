@@ -295,8 +295,7 @@ end
 
 myfile = fullfile(output);
 fid = fopen(myfile,'w');
-fprintf(fid,'participant_id\tethRT_q1\tethRT_q2\tethRT_q3\tethRT_q4\tethRT_q5\tethRT_q6\tfinRT_q1\tfinRT_q2\tfinRT_q3\tfinRT_q4\tfinRT_q5\tfinRT_q6\theaRT_q1\theaRT_q2\theaRT_q3\theaRT_q4\theaRT_q5\theaRT_q6\trecRT_q1\trecRT_q2\trecRT_q3\trecRT_q4\trecRT_q5\trecRT_q6\tsocRT_q1\tsocRT_q2\tsocRT_q3\tsocRT_q4\tsocRT_q5\tsocRT_q6\n'); % Qualtrics data starts at Ecog 2. Ecog 11 is an attention check.
-%fclose(fid);
+fprintf(fid,'participant_id\tethRT_q1\tethRT_q2\tethRT_q3\tethRT_q4\tethRT_q5\tethRT_q6\tfinRT_q1\tfinRT_q2\tfinRT_q3\tfinRT_q4\tfinRT_q5\tfinRT_q6\theaRT_q1\theaRT_q2\theaRT_q3\theaRT_q4\theaRT_q5\theaRT_q6\trecRT_q1\trecRT_q2\trecRT_q3\trecRT_q4\trecRT_q5\trecRT_q6\tsocRT_q1\tsocRT_q2\tsocRT_q3\tsocRT_q4\tsocRT_q5\tsocRT_q6\n'); %fclose(fid);
     
 for ii = 1:N %1:N % for each Participant
     
@@ -306,7 +305,8 @@ for ii = 1:N %1:N % for each Participant
         
     partnum = num2str(ii,'%03.f');
     inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.xlsx']));
- 
+    [n,t,data] = xlsread(inputdir_name);
+    
     start = find(strcmp('ethRT_1',data(1,:))); 
     finish = find(strcmp('socRT_6',data(1,:))); 
     T = 30; % umber of questions

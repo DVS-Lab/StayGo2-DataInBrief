@@ -1,0 +1,5 @@
+Trial	Trial_type	D7	D7_actual	D12	D12_actual	Decision
+1	comp1	85	16	85	68	No
+2	comp2	82	34	134	145	Yes
+3	comp3	86	75	146	86	Yes
+4	comp4	112	101	224	115	Yes

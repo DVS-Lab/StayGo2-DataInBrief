@@ -1,0 +1,66 @@
+{
+    "BehavioralMetadata": {
+      "Description": "Gold Mine Task Comprehension Checks",
+      "TermURL": "N/A"
+    },
+    "Trial": {
+      "Description": "Identifies the trial number",
+      "Levels": {
+        "1": "Comprehension Check 1",
+        "2": "Comprehension Check 2",
+        "3": "Comprehension Check 3",
+        "4": "Comprehension Check 4" 
+      }
+    },
+    "Trial_type": {
+      "Description": "Identifies the comprehension check number",
+      "Levels": {
+        "1": "Comprehension Check 1",
+        "2": "Comprehension Check 2",
+        "3": "Comprehension Check 3",
+        "4": "Comprehension Check 4" 
+      }
+    },
+
+    "D7": {
+        "Description": "Number of tokens participant specifies will be output by the mine on Day 12.",
+        "Levels": {
+          "Units": "tokens (numeric values)"
+        }
+      },
+
+      "D7_actual": {
+        "Description": "Actual number of tokens that the gold mine would output on Day 12.",
+        "Levels": {
+        "16": "Day 7 output for Comprehension Check 1 (exponential)",
+        "34": "Day 7 output for Comprehension Check 2 (exponential)",
+        "75": "Day 7 output for Comprehension Check 3 (inverse exponential)",
+        "101": "Day 7 output for Comprehension Check 4 (inverse exponential)"
+        }
+      },
+
+    "D12": {
+        "Description": "Number of tokens participant specifies will be output by the mine on Day 12.",
+        "Levels": {
+          "Units": "tokens (numeric values)"
+        }
+      },
+
+      "D12_actual": {
+        "Description": "Actual number of tokens that the gold mine would output on Day 12.",
+        "Levels": {
+        "68": "Day 12 output for Comprehension Check 1",
+        "145": "Day 12 output for Comprehension Check 2",
+        "86": "Day 12 output for Comprehension Check 3",
+        "115": "Day 12 output for Comprehension Check 4"
+        }
+      },
+
+      "Decision": {
+        "Description": "Will this mine make more total tokens than the sure-and-steady mine by the 12th turn?",
+        "Levels": {
+        "Yes": "Mine is better than sure-and-steady mine (expect to make more than 100 tokens)",
+        "No": "Mine is worse than sure-and-steady mine (expect to make less than 100 tokens)"
+        }
+      }
+}

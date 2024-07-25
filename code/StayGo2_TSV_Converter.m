@@ -16,7 +16,7 @@ All_Bad_Trials  = [];
 
 for subj = 1:N % 37:N for each Participant with response time data and after soft launch
     
-    try
+   % try
         
     partnum = num2str(subj,'%03.f');
     inputdir_name = fullfile(maindir,(['sub-' partnum]),(['sub-' partnum]));
@@ -604,7 +604,7 @@ for subj = 1:N % 37:N for each Participant with response time data and after sof
                 
                 
                 if teststr == "e_59_a1.4" && yy == 1 && turn == 4 % exception for messed up timing position
-                    feedback_response_time = (data(2,STAY_RT_indices(jj)+5));
+                    feedback_response_time = cell2mat(data(2,STAY_RT_indices(jj)+5));
                 end
                 
                 if zz > 4
@@ -683,12 +683,11 @@ for subj = 1:N % 37:N for each Participant with response time data and after sof
         end
         
         Full_Participant = [Full_Participant; Round_participant];
-        
     end
     
     %% Order participant by block
     
-    blocks_first = str2mat(Full_Participant(:,1));
+    blocks_first = char(Full_Participant(:,1));
     blocks = str2num(blocks_first);
     
     [C,~] = size(blocks);
@@ -777,10 +776,10 @@ for subj = 1:N % 37:N for each Participant with response time data and after sof
      
      %% Catch failed output
      
-    catch ME
-        disp(["subj_" subj "debug"])
-    end
-end
+%     catch ME
+%         disp(["subj_" subj "debug"])
+%     end
+ end
 
 [K,~] = size(All_Bad_Trials);
 
