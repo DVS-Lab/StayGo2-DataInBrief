@@ -351,12 +351,10 @@ fid = fopen(myfile,'w');
 fprintf(fid,'participant_id\tEducation\tAge\tGender\tRace\tEthnicity\tZipcode\tWhen_Move\tCurrent_City\tCurrent_State\tTotal_Income\tPersonal_Income\tRent\tHousehold_Members\tEducation_ses\tYears_Education\tLadder\tOccupation_1\tOccupation_2\tAlpha\tGamma\n'); 
 %fclose(fid);
 
-for ii = 10 % for each Participant
+for ii = 1:N % for each Participant
     
     result = [];
-    
-   
-        
+
         partnum = num2str(ii,'%03.f');
         inputdir_name = fullfile(maindir,'sourcedata',(['sub-' partnum]),(['sub-' partnum '.xlsx']));
         [n,t,data] = xlsread(inputdir_name);

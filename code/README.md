@@ -9,6 +9,7 @@ The code inputs the sourcedata from [Qualtrics_sourcedata.xlsx](../bids/sourceda
 3. The [Stago2_TSV_Comprehension.m](code/Stago2_TSV_Comprehension.m) Extracts comprehension checks (yes/no decision and value predicted) 
 4. The [StayGo2_extract_phenotypes.m](code/StayGo2_extract_phenotypes.m) Specifies survey data in our sample for each participant. 
 5. The [StayGo2_Surveys_Scored.m](code/StayGo2_Surveys_Scored.m) Scores the participants survey responses into outputs for analysis.
+6. The [reliability.R](code/reliability_coefficient/reliability.R) Finds the reliability coefficients for the survey data in the phenotype directory.
 
 ## Conversion of Sourcedata to BIDS Format:
 
