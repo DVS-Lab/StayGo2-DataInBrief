@@ -52,4 +52,4 @@ cd StayGo2-DataInBrief
 ```
 
 ## Acknowledgments
-This work was supported in part by grants from the National Institute on Aging (RF1-AG067011 to DVS). We thank Ishika Kohli and Amanda Nguyen for assistance with data collection.
+This work was supported in part by grants from the National Institute on Aging (RF1-AG067011 to DVS). We thank Ishika Kohli and Amanda Nguyen for assistance with data collection. We also thank Cooper Sharp for helping validate the dataset through the BIDS validator.
