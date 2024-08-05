@@ -37,7 +37,7 @@
       "Not Hispanic or Latino": "Not Hispanic or Latino"
     }
   },
-  "current_zipcode": {
+  "Zipcode": {
     "Description": "Current zipcode of the participant as reported by the participant",
     "Units": "zipcode (numeric values)"
   },
@@ -52,7 +52,7 @@
     }
   },
   "Current_City": {
-    "Description": "Current state of the participant as reported by the participant",
+    "Description": "Current city of the participant as reported by the participant",
     "Units": "city (string)"
   },
   "Current_State": {
@@ -114,77 +114,6 @@
 "Zipcode": {
   "Description": "Reported zipcode of the participant's home",
   "Units": "zipcode (numeric values)"
-},
-"childhood_city": {
-  "Description": "City where participant self-reported spending the majority of their childhood (0-18 years of age)",
-  "Units": "city (string)"
-},
-"childhood_state": {
-  "Description": "State reported by participant where they spent the majority of their childhood",
-  "Levels": {
-    "Alabama": "Alabama",
-    "Alaska": "Alaska",
-    "Arizona": "Arizona",
-    "Arkansas": "Arkansas",
-    "California": "California",
-    "Colorado": "Colorado",
-    "Connecticut": "Connecticut",
-    "Delaware": "Delaware",
-    "Florida": "Florida",
-    "Georgia": "Georgia",
-    "Hawaii": "Hawaii",
-    "Idaho": "Idaho",
-    "Illinois": "Illinois",
-    "Indiana": "Indiana",
-    "Iowa": "Iowa",
-    "Kansas": "Kansas",
-    "Kentucky": "Kentucky",
-    "Louisiana": "Louisiana",
-    "Maine": "Maine",
-    "Maryland": "Maryland",
-    "Massachusetts": "Massachusetts",
-    "Michigan": "Michigan",
-    "Minnesota": "Minnesota",
-    "Mississippi": "Mississippi",
-    "Missouri": "Missouri",
-    "Montana": "Montana",
-    "Nebraska": "Nebraska",
-    "Nevada": "Nevada",
-    "New Hampshire": "New Hampshire",
-    "New Jersey": "New Jersey",
-    "New Mexico": "New Mexico",
-    "New York": "New York",
-    "North Carolina": "North Carolina",
-    "North Dakota": "North Dakota",
-    "Ohio": "Ohio",
-    "Oklahoma": "Oklahoma",
-    "Oregon": "Oregon",
-    "Pennsylvania": "Pennsylvania",
-    "Rhode Island": "Rhode Island",
-    "South Carolina": "South Carolina",
-    "South Dakota": "South Dakota",
-    "Tennessee": "Tennessee",
-    "Texas": "Texas",
-    "Utah": "Utah",
-    "Vermont": "Vermont",
-    "Virginia": "Virginia",
-    "Washington": "Washington",
-    "West Virginia": "West Virginia",
-    "Wisconsin": "Wisconsin",
-    "Wyoming": "Wyoming",
-    "Other": "Other"
-  }
-},
-"years_childhood": {
-  "Description": "How many years participant self-reported spending in their childhood zipcode",
-  "Levels": {
-    "Less than 6 months": "Less than 6 months ago",
-    "6 months to 1 year": "6 months to 1 year ago",
-    "1 to 2 years": "1 to 2 year",
-    "2 to 5 years": "2 to 5 years",
-    "5 to 10 years": "5 to 10 years",
-    "More than 10 years": "More than 10 years"
-  }
 },
 "Total_Income": {
   "Description": "Self-reported total household income before tax is taken out",
