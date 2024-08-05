@@ -1,0 +1,76 @@
+# load packages
+library("readxl")
+library("ggplot2")
+library("ggpubr")
+library("reshape2")
+library("emmeans")
+library("hrbrthemes")
+library("umx")
+library("interactions")
+library("car")
+library("lme4")
+library(ICC)
+library(performance)
+library(robustlmm)
+
+
+# import covariates
+mixed_effects <- read_excel("A:/Data/StayGo_Study2/StayGo_Study2/code/H1.xlsx")
+H2 <- read_excel("A:/Data/StayGo_Study2/StayGo_Study2/code/H2.xlsx")
+exploratory <- read_excel("A:/Data/StayGo_Study2/StayGo_Study2/code/Exploratory.xlsx")
+
+
+
+m2<-lmer(turns ~ 1 + growth + function_e + growth*function_e + (growth | ID) + (function_e | ID), data=mixed_effects, REML=FALSE)
+
+
+m1<-lmer(turns ~ 1 +  (growth | ID), data=mixed_effects)
+m2<-lmer(turns ~ 1 + growth + (growth | ID), data=mixed_effects)
+
+x <- cbind(mixed_effects, "growth","function_e")
+y <- cbind(mixed_effects,"stay")
+full_data = cbind(x,y)
+
+function_e <- factor(mixed_effects$function_e)
+growth <-factor(mixed_effects$growth)
+ID <-mixed_effects$ID
+turns <-mixed_effects$turns
+stay <-mixed_effects$stay
+correct <-H2$correct
+recent_change <-exploratory$recent_change
+average_trend <-exploratory$average_tokens
+
+data_test <- cbind(function_e,growth,stay,turns,ID)
+data_test <- data.frame(data_test)
+
+data_test2 <-cbind(function_e,growth,stay,turns,ID,H2$correct, recent_change, average_trend)
+data_test2 <- data.frame(data_test2)
+
+m2<-lmer(stay ~ growth*function_e + (growth | ID), data=data_test)
+
+m5<-lmer(stay ~ 1 + (growth | ID), data=data_test)
+
+m6 <- glmer(stay ~ turns*growth + (turns | ID) + (growth | ID), data = data_test2, family = "binomial", glmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 100000)))
+
+m7a<-lmer(turns ~ 1 + growth + function_e + (growth | ID) + (function_e | ID), data=data_test, REML = FALSE)
+m6b <- glmer(correct ~ growth*turns + (turns | ID) + (growth | ID), data = data_test2, family = "binomial", glmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 100000)))
+
+
+m7<-lmer(turns ~ 1 + growth + function_e + growth*function_e + (growth | ID) + (function_e | ID), data=data_test, REML = FALSE)
+
+m8<-lmer(turns ~ 1 + (growth | ID) + (function_e | ID), data=data_test, REML = FALSE)
+
+m9<-lmer(V6 ~ turns*growth + (growth | ID) + (turns | ID), data=data_test2, REML = FALSE)
+
+m9<-robustlmm::rlmer(turns ~ 1 + (average_trend | ID) + (recent_change | ID), data=data_test2, REML = FALSE, lmerControl(optimizer="bobyqa"))
+
+m10<-robustlmm::rlmer(turns ~ (average_trend) + (recent_change) + (average_trend | ID) + (recent_change | ID), data=data_test2, REML = FALSE, lmerControl(optimizer="bobyqa"))
+
+m11<-robustlmm::rlmer(turns ~ (average_trend) + (recent_change) + (average_trend | ID)+ (recent_change | ID), data=data_test2, REML = FALSE, lmerControl(optimizer="bobyqa"))
+
+m12<-robustlmm::rlmer(turns ~ (average_trend*function_e) + (recent_change*function_e) + (average_trend | ID)+ (recent_change | ID), data=data_test2, REML = FALSE, lmerControl(optimizer="bobyqa"))
+
+m14<-lmer(turns ~ (average_trend*function_e) + (recent_change*function_e) + (average_trend | ID)+ (recent_change | ID), data=data_test2, REML = FALSE, lmerControl(optimizer="bobyqa"))
+
+
+m13<-robustlmm::rlmer(turns ~ (average_trend*function_e) + (recent_change*function_e) + (average_trend | ID)+ (recent_change | ID)+ (function_e| ID), data=data_test2, REML = FALSE, lmerControl(optimizer="bobyqa"))
